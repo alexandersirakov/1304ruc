@@ -40,7 +40,7 @@ namespace task7
                 else { Console.WriteLine("RAZNOSTRANEN"); }
             }
 
-            else { Console.WriteLine("IT'S NOT POSSIBLE TO FORM A TIANGLE"); }
+            else { Console.WriteLine("IT'S NOT POSSIBLE TO FORM A TRIANGLE"); }
 
             
         }
