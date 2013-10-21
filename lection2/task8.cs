@@ -26,8 +26,8 @@ namespace task8
             Console.WriteLine("{0}*x^2 + {1}*b + {2} = 0", a, b, c);
             
             d = b * b - 4 * a * c;
-            x1 = (-b + Math.Sqrt(d)) / a;
-            x2 = (-b - Math.Sqrt(d)) / a;
+            x1 = (-b + Math.Sqrt(d)) / (a*2);
+            x2 = (-b - Math.Sqrt(d)) / (a*2);
 
             Console.WriteLine("X1= {0} and X2= {1}", x1, x2);
             
