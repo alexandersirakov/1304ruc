@@ -20,81 +20,222 @@ namespace Calculator
         double number2;
         double result;
 
-        bool add = false;
-        bool substract = false;
-        bool multiply = false;
-        bool divide = false;
-
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            add = true;
-            number1 = double.Parse(textBox1.Text);
-            textBox1.Text = "";
+            string[] text = textBox1.Text.Split();
+
+            if (text.Contains("+") || text.Contains("-") || text.Contains("*") || text.Contains("/"))
+            {
+                if (text[1] == "+")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 + number2;
+                    textBox1.Text = result.ToString() + " + ";
+
+                }
+
+                if (text[1] == "-")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 - number2;
+                    textBox1.Text = result.ToString() + " + ";
+                }
+
+                if (text[1] == "*")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 * number2;
+                    textBox1.Text = result.ToString() + " + ";
+                }
+
+                if (text[1] == "/")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 / number2;
+                    textBox1.Text = result.ToString() + " + ";
+                }
+            }
+            else
+            {
+                textBox1.Text += " + ";
+            }
         }
 
         private void btnSubstract_Click(object sender, EventArgs e)
         {
-            if (textBox1.TextLength > 0)
+            string[] text = textBox1.Text.Split();
+
+            if (text.Contains("+") || text.Contains("-") || text.Contains("*") || text.Contains("/"))
             {
-                substract = true;
-                number1 = double.Parse(textBox1.Text);
-                textBox1.Text = "";
+                if (text[1] == "+")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 + number2;
+                    textBox1.Text = result.ToString() + " - ";
+
+                }
+
+                if (text[1] == "-")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 - number2;
+                    textBox1.Text = result.ToString() + " - ";
+                }
+
+                if (text[1] == "*")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 * number2;
+                    textBox1.Text = result.ToString() + " - ";
+                }
+
+                if (text[1] == "/")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 / number2;
+                    textBox1.Text = result.ToString() + " - ";
+                }
             }
             else
             {
-                textBox1.Text = "-";
-            }
+                textBox1.Text += " - ";
+            }           
         }
 
         private void btnMultiply_Click(object sender, EventArgs e)
         {
-            multiply = true;
-            number1 = double.Parse(textBox1.Text);
-            textBox1.Text = "";
+            string[] text = textBox1.Text.Split();
+
+            if (text.Contains("+") || text.Contains("-") || text.Contains("*") || text.Contains("/"))
+            {
+                if (text[1] == "+")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 + number2;
+                    textBox1.Text = result.ToString() + " * ";
+
+                }
+
+                if (text[1] == "-")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 - number2;
+                    textBox1.Text = result.ToString() + " * ";
+                }
+
+                if (text[1] == "*")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 * number2;
+                    textBox1.Text = result.ToString() + " * ";
+                }
+
+                if (text[1] == "/")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 / number2;
+                    textBox1.Text = result.ToString() + " * ";
+                }
+            }
+            else
+            {
+                textBox1.Text += " * ";
+            } 
         }
 
         private void btnDivide_Click(object sender, EventArgs e)
         {
-            divide = true;
-            number1 = double.Parse(textBox1.Text);
-            textBox1.Text = "";
+            string[] text = textBox1.Text.Split();
+
+            if (text.Contains("+") || text.Contains("-") || text.Contains("*") || text.Contains("/"))
+            {
+                if (text[1] == "+")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 + number2;
+                    textBox1.Text = result.ToString() + " / ";
+
+                }
+
+                if (text[1] == "-")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 - number2;
+                    textBox1.Text = result.ToString() + " / ";
+                }
+
+                if (text[1] == "*")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 * number2;
+                    textBox1.Text = result.ToString() + " / ";
+                }
+
+                if (text[1] == "/")
+                {
+                    number1 = double.Parse(text[0]);
+                    number2 = double.Parse(text[2]);
+                    result = number1 / number2;
+                    textBox1.Text = result.ToString() + " / ";
+                }
+            }
+            else
+            {
+                textBox1.Text += " / ";
+            }
         }
 
         private void btnEquals_Click(object sender, EventArgs e)
         {
-            if (add)
+            string[] text = textBox1.Text.Split();
+
+            if (text[1] == "+")
             {
-                number2 = double.Parse(textBox1.Text);
+                number1 = double.Parse(text[0]);
+                number2 = double.Parse(text[2]);
                 result = number1 + number2;
                 textBox1.Text = result.ToString();
-                number1 = 0;
-                add = false;
             }
-            if (substract)
+
+            if (text[1] == "-")
             {
-                number2 = double.Parse(textBox1.Text);
+                number1 = double.Parse(text[0]);
+                number2 = double.Parse(text[2]);
                 result = number1 - number2;
                 textBox1.Text = result.ToString();
-                number1 = 0;
-                substract = false;
             }
-            if (multiply)
+
+            if (text[1] == "*")
             {
-                number2 = double.Parse(textBox1.Text);
+                number1 = double.Parse(text[0]);
+                number2 = double.Parse(text[2]);
                 result = number1 * number2;
                 textBox1.Text = result.ToString();
-                number1 = 0;
-                multiply = false;
             }
-            if (divide)
+
+            if (text[1] == "/")
             {
-                number2 = double.Parse(textBox1.Text);
+                number1 = double.Parse(text[0]);
+                number2 = double.Parse(text[2]);
                 result = number1 / number2;
                 textBox1.Text = result.ToString();
-                number1 = 0;
-                divide = false;
             }
+
         }
 
         private void btnSqrt_Click(object sender, EventArgs e)
@@ -119,11 +260,16 @@ namespace Calculator
         }
 
         private void btnDecimal_Click(object sender, EventArgs e)
-        {// In order to be UNABLE to type (9..1 instead of 9.1)
-            if (!(textBox1.Text.Contains(".")))
+        {
+            if (!(textBox1.Text.Contains(",")))
             {
-                textBox1.Text += ".";
+                textBox1.Text += ",";
             }
+        }
+
+        private void btn0_Click(object sender, EventArgs e)
+        {
+            textBox1.Text += "0"; 
         }
 
         private void btn9_Click(object sender, EventArgs e)
@@ -171,12 +317,11 @@ namespace Calculator
             textBox1.Text += "1";
         }
 
-        private void btn0_Click(object sender, EventArgs e)
-        {// In order to be UNABLE to type (001..)
-            if (!(textBox1.TextLength<1))
-            {
-                textBox1.Text += "0";
-            }
+        private void btnChangeSign_Click(object sender, EventArgs e)
+        {
+            number1 = double.Parse(textBox1.Text);
+            number1 = -(number1);
+            textBox1.Text = number1.ToString();
         }
     }
 }
